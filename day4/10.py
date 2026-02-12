@@ -1,12 +1,24 @@
 # 1
 import numpy.ma as ma
-
-masked1 = ma.masked_greater(np.random.randint(1, 20, (4, 4)), 10)
+data=np.random.randint(1,21,(4,4))
+masked1 = ma.masked_greater(data, 10)
 print("Sum of Unmasked Elements:", masked1.sum())
 
 # 2
-masked2 = ma.masked_array(np.random.randint(1, 20, (3, 3)))
-masked2.mask = np.eye(3, dtype=bool)
-mean_unmasked = masked2.mean()
-masked2 = masked2.filled(mean_unmasked)
-print("Diagonal Replaced with Mean:\n", masked2)
+
+data2=np.random.randint(1,20,(3,3))
+diag_mask = np.eye(3, dtype=bool)
+masked_arr=ma.masked_array(data2, mask=diag_mask)
+mean_unmasked = masked_arr.mean()
+masked_arr = masked_arr.filled(mean_unmasked)
+print("Diagonal Replaced with Mean:\n", masked_arr)
+
+
+
+
+
+
+
+
+
+

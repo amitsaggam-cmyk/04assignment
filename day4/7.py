@@ -1,4 +1,5 @@
 # Assignment 7:
+import numpy as np
 # 1
 arr10 = np.arange(1, 10).reshape(3, 3)
 reshaped1 = arr10.reshape(1, 9)

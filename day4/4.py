@@ -1,3 +1,4 @@
+import numpy as np
 # 1
 arr6 = np.random.randint(1, 50, (5, 5))
 print("Mean:", np.mean(arr6))

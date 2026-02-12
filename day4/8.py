@@ -1,3 +1,4 @@
+import numpy as np
 # 1
 arr12 = np.random.randint(1, 20, (5, 5))
 corners = arr12[[0, 0, -1, -1], [0, -1, 0, -1]]
